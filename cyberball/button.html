@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .hidden{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="userLeft">←</div>
+    <img src="" class="hidden" id="left">
+    <button id="userRight">-></div>
+    <img src="br.gif" class="hidden" id="right">
+  </body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+	var img = document.createElement("img");
+
+
+      $("#userLeft").on("click", function(){
+			imageUrl = "bl.gif";
+		img.src = imageUrl;
+	document.body.appendChild(img);
+window.restartAnim = function () {
+    img.src = "";
+    img.src = imageUrl;
+}
+        $("#left").show().center();
+      });
+      $("#userRight").on("click", function(){
+        $("#right").show().center();
+      });
+	</script>
+</html>

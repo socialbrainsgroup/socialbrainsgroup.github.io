@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .hidden{
+        display: none;
+      }
+    </style>
+    <title>Cyberball</title>
+	<h1>Choose the side you want to throw the ball and repeat when you get it back.</h1>
+  </head>
+<body onload="myFunction()">
+
+<h1>the value for number is:  <span id="myText"></span></h1>
+
+</body>
+    <button id="userLeft">←</div>
+    <img src="" class="hidden" id="gif">
+    <button id="userRight">→</div>
+
+  </body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+	var img = document.createElement("img");
+	$("#userLeft").on("click", function(){
+		imageUrl = "bl.gif";
+		document.getElementById("myText").innerHTML = imageUrl;
+		img.src = imageUrl;
+		document.body.appendChild(img);
+		window.restartAnim = function () {
+			img.src = "";
+			img.src = imageUrl;
+	}
+	$("#gif").show().center();
+	});
+	$("#userRight").on("click", function(){
+		imageUrl = "br.gif";
+		document.getElementById("myText").innerHTML = imageUrl;
+		img.src = imageUrl;
+		document.body.appendChild(img);
+		window.restartAnim = function () {
+			img.src = "";
+			img.src = imageUrl;
+	}
+	$("#gif").show().center();
+	});
+	
+	</script>
+</html>
